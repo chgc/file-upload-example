@@ -1,0 +1,9 @@
+<form [formGroup]="formData" (ngSubmit)="upload()">
+  <label>File Upload</label> <br />
+  <input type="file" multiple (change)="onFileChange($event)" />
+  <button type="submit">Upload</button>
+</form>
+
+<pre>
+  {{ uploadProgress() | json}}
+</pre>
